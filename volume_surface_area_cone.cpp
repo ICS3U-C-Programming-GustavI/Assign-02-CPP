@@ -6,29 +6,30 @@
 #include <cmath>
 #include <iomanip>
 #include <iostream>
+#include <string>  // Added the missing include for string
 
 int main() {
-    // Input for radius and height of a cone
-    std::cout << "Welcome to the Cone Surface Area and Volume calculator. Please insert your desired values.\n";
-
+    // Input
+    std::cout << "Welcome to the Cone Surface Area and Volume calculator.";
+    std::cout << "Please insert your desired values.\n";
     std::string radiusInput, heightInput;
     std::cout << "Enter the radius of the cone: ";
     std::cin >> radiusInput;
     std::cout << "Enter the height of the cone: ";
     std::cin >> heightInput;
 
-    // Error checking (ensures input is a number, not negative and not a word)
+    // Error checking (ensures input is a number)
     for (char c : radiusInput) {
         if (!isdigit(c) && c != '.') {
-            std::cout << "\nError: Please enter a valid positive number for radius.\n";
-            return 1;
+            std::cout << "\nError: Please enter a valid";
+            std::cout << "positive number for radius.\n";
         }
     }
     for (char c : heightInput) {
         if (!isdigit(c) && c != '.') {
-            std::cout << "\nError: Please enter a valid positive number for height.\n";
-            return 1;
-        }
+            std::cout << "\nError: Please enter a";
+            std::cout << "valid positive number for height.\n";
+         }
     }
 
     float radius = std::stof(radiusInput);
@@ -46,12 +47,15 @@ int main() {
     // Process: Calculate the volume and **corrected** surface area
     const float PI = 3.14159265359;
     float volume = (1.0 / 3.0) * PI * (radius * radius) * height;
-    float surfaceArea = PI * radius * (radius + sqrt((height * height) + (radius * radius)));
+    float surfaceArea = PI * radius *
+    (radius + sqrt((height * height) + (radius * radius)));
 
     // Output
     std::cout << "\n--- Cone Measurements ---\n";
-    std::cout << "Volume: " << std::fixed << std::setprecision(2) << volume << " " << unit << "³\n";
-    std::cout << "Surface Area: " << std::fixed << std::setprecision(2) << surfaceArea << " " << unit << "²\n";
+    std::cout << "Volume: " << std::fixed << std::setprecision(2)
+              << volume << " " << unit << "³\n";
+    std::cout << "Surface Area: " << std::fixed << std::setprecision(2)
+              << surfaceArea << " " << unit << "²\n";
 
     return 0;
 }
