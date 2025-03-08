@@ -13,9 +13,9 @@ int main() {
     std::cout << "Welcome to the Cone calculator (SA and V).";
     std::cout << "Please insert your desired values.\n";
     std::string radiusInput, heightInput;
-    std::cout << "Enter the radius of the cone: ";
+    std::cout << "Enter the radius: ";
     std::cin >> radiusInput;
-    std::cout << "Enter the height of the cone: ";
+    std::cout << "Enter the height: ";
     std::cin >> heightInput;
 
     // Error checking (ensures input is a number)
