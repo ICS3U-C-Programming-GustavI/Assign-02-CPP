@@ -22,13 +22,13 @@ int main() {
     for (char c : radiusInput) {
         if (!isdigit(c) && c != '.') {
             std::cout << "\nError: Please enter a valid";
-            std::cout << "positive number for radius.\n";
+            std::cout << " positive number for radius.\n";
         }
     }
     for (char c : heightInput) {
         if (!isdigit(c) && c != '.') {
             std::cout << "\nError: Please enter a";
-            std::cout << "valid positive number for height.\n";
+            std::cout <<" valid positive number for height.\n";
          }
     }
 
