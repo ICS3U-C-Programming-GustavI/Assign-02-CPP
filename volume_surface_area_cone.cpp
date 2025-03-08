@@ -10,7 +10,7 @@
 
 int main() {
     // Input
-    std::cout << "Welcome to the Cone Surface Area and Volume calculator.";
+    std::cout << "Welcome to the Cone Surface Area and Volume calculator.☺";
     std::cout << "Please insert your desired values.\n";
     std::string radiusInput, heightInput;
     std::cout << "Enter the radius of the cone: ";
